@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="180" height="180" viewBox="0 0 100 100">
+  <rect
+    x="0"
+    y="0"
+    rx="8"
+    ry="8"
+    width="100"
+    height="100"
+    fill="hsl(210deg, 50%, 50%)"></rect>
+
+  <text
+    x="50"
+    y="50"
+    dx="0"
+    dy="0"
+    fill="#ffffff"
+    font-size="96"
+    font-family="sans-serif"
+    font-weight="700"
+    text-anchor="middle"
+    dominant-baseline="central">B</text>
+</svg>

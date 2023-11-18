@@ -1,0 +1,3 @@
+{
+  "app": "node --env-file=.env ./aws/index.js"
+}

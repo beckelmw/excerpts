@@ -1,0 +1,39 @@
+{
+  "name": "excerpts",
+  "version": "0.0.1",
+  "description": "",
+  "type": "module",
+  "main": "src/index.js",
+  "scripts": {
+    "dev": "node --watch-path=./src/ --watch-path=./excerpts --watch-path=./how ./src/index.js",
+    "start": "node ./src/index.js",
+    "deploy": "npm start && aws s3 sync ./public s3://excerpts.beckelman.net",
+    "infra": "cdk deploy"
+  },
+  "keywords": [],
+  "author": "Bill Beckelman <bill+excertps@beckelman.net>",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.8.10",
+    "aws-cdk": "^2.110.1",
+    "aws-cdk-lib": "^2.110.1",
+    "clipboardy": "^4.0.0",
+    "execa": "^8.0.1",
+    "feed": "^4.2.2",
+    "globby": "^14.0.0",
+    "hastscript": "^8.0.0",
+    "js-yaml": "^4.1.0",
+    "rehype-highlight": "^7.0.0",
+    "rehype-minify-whitespace": "^6.0.0",
+    "rehype-raw": "^7.0.0",
+    "rehype-stringify": "^10.0.0",
+    "remark-frontmatter": "^5.0.0",
+    "remark-gfm": "^4.0.0",
+    "remark-parse": "^11.0.0",
+    "remark-rehype": "^11.0.0",
+    "rollup": "^4.5.1",
+    "typescript": "^5.2.2",
+    "unified": "^11.0.4",
+    "unist-util-visit": "^5.0.0"
+  }
+}

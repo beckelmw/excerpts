@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+    <html lang="en">
+      <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Excerpts | Bill Beckelman</title>
+        <link rel="icon" href="/favicon.svg" />
+        <meta
+          name="description"
+          content=A collection of excerpts by Bill Beckelman
+        />
+        <script src="/js/color-mode.js"></script>
+        <style>
+          
+  :root {
+    --color-background: #FAFAFA;
+    --color-text: #050505;
+    --color-primary: #0077B2;
+  }
+  
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --color-background: #303943;
+      --color-text: #ffffff;
+      --color-primary: #B1DBEF;
+    }
+  }
+        </style>
+        <link rel="stylesheet" href="/style.css" />
+        <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
+        <link
+          id="code-theme"
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css"
+        />
+      </head>
+      <body>
+        <nav>
+          <a href="/">Bill Beckelman's collection of excerpts</a>
+
+          <a class="icon" title="How I made this site" href="/how/">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-6 h-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z"
+              />
+            </svg>
+          </a>
+
+          <a href="https://github.com/beckelmw/excerpts" class="icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 98 96" width="24px" height="24px">
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M48.854 0C21.839 0 0 22 0 49.217c0 21.756 13.993 40.172 33.405 46.69 2.427.49 3.316-1.059 3.316-2.362 0-1.141-.08-5.052-.08-9.127-13.59 2.934-16.42-5.867-16.42-5.867-2.184-5.704-5.42-7.17-5.42-7.17-4.448-3.015.324-3.015.324-3.015 4.934.326 7.523 5.052 7.523 5.052 4.367 7.496 11.404 5.378 14.235 4.074.404-3.178 1.699-5.378 3.074-6.6-10.839-1.141-22.243-5.378-22.243-24.283 0-5.378 1.94-9.778 5.014-13.2-.485-1.222-2.184-6.275.486-13.038 0 0 4.125-1.304 13.426 5.052a46.97 46.97 0 0 1 12.214-1.63c4.125 0 8.33.571 12.213 1.63 9.302-6.356 13.427-5.052 13.427-5.052 2.67 6.763.97 11.816.485 13.038 3.155 3.422 5.015 7.822 5.015 13.2 0 18.905-11.404 23.06-22.324 24.283 1.78 1.548 3.316 4.481 3.316 9.126 0 6.6-.08 11.897-.08 13.526 0 1.304.89 2.853 3.316 2.364 19.412-6.52 33.405-24.935 33.405-46.691C97.707 22 75.788 0 48.854 0z"
+                fill="currentColor"
+              />
+            </svg>
+          </a>
+
+          <a class="icon" href="/feed.xml" title="RSS feed">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-6 h-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M12.75 19.5v-.75a7.5 7.5 0 00-7.5-7.5H4.5m0-6.75h.75c7.87 0 14.25 6.38 14.25 14.25v.75M6 18.75a.75.75 0 11-1.5 0 .75.75 0 011.5 0z"
+              />
+            </svg>
+          </a>
+
+          <color-mode></color-mode>
+        </nav>
+
+        <main> <article id="2023-11-25T1652">
+      <header>
+        <h1>Emulating prefers-color-scheme in DevTools</h1>
+      </header>
+      <figure class="quote"><blockquote>Switching the entire operating system's color scheme can get annoying real quick, so Chrome DevTools now allows you to emulate the user's preferred color scheme in a way that only affects the currently visible tab. Open the Command Menu, start typing Rendering, run the Show Rendering command, and then change the Emulate CSS media feature prefers-color-scheme option.</blockquote><figcaption><cite><a href="https://web.dev/articles/prefers-color-scheme#emulating_prefers-color-scheme_in_devtools">https://web.dev/articles/prefers-color-scheme#emulating_prefers-color-scheme_in_devtools</a></cite></figcaption></figure><p>I knew this was possible, but the chrome dev tools don't exactly make it easy to find.</p>
+      <footer>
+        <ul>
+          <li>
+            <a href="#2023-11-25T1652">2023-11-25</a>
+          </li>
+          <li>#css</li>
+        </ul>
+      </footer>
+    </article>
+<article id="2023-11-24T1603">
+      <header>
+        <h1>Building Serverless Land Part 1 – Automating content aggregation | AWS Compute Blog</h1>
+      </header>
+      <figure class="quote"><blockquote>This blog post explains how to automate the aggregation of content from multiple RSS feeds into a JSON file stored in GitHub. This workflow uses AWS Lambda and AWS Step Functions, triggered by Amazon EventBridge.</blockquote><figcaption><cite><a href="https://aws.amazon.com/blogs/compute/building-serverless-land-part-1-automating-content-aggregation/">https://aws.amazon.com/blogs/compute/building-serverless-land-part-1-automating-content-aggregation/</a></cite></figcaption></figure><p>Years ago, I was an avid user of <a href="https://en.wikipedia.org/wiki/Google_Reader">Google Reader</a>. After it shutdown, I never found a new reader and slowly lost track of a large swath of useful content from reliable folks I had curated over the years. As a side project I am starting to think about building my own.</p><p>I like using the AWS services above, but this looks interesting as well. Using a <a href="https://github.com/osmoscraft/osmosfeed">github action on a cron schedule</a>.</p>
+      <footer>
+        <ul>
+          <li>
+            <a href="#2023-11-24T1603">2023-11-24</a>
+          </li>
+          <li>#rss</li>
+        </ul>
+      </footer>
+    </article>
+<article id="2023-11-22T1636">
+      <header>
+        <h1>The Quest for the Perfect Dark Mode</h1>
+      </header>
+      <figure class="quote"><blockquote>Maybe the hardest / most complicated part of building this blog was adding Dark Mode. Not the live-embedded code snippets, not the unified GraphQL layer that manages and aggregates all content and data, not the custom analytics system, not the myriad bits of whimsy. Freaking Dark Mode. It's a good reminder that when it comes to software development, a simple feature can have a complex implementation.</blockquote><figcaption><cite><a href="https://www.joshwcomeau.com/react/dark-mode/">https://www.joshwcomeau.com/react/dark-mode/</a></cite></figcaption></figure><p>Adding dark mode to this site, proved to be a bit of challenge as well. This article helped a lot though. Here is <a href="/how/dark-mode/">how I did it</a>.</p>
+      <footer>
+        <ul>
+          <li>
+            <a href="#2023-11-22T1636">2023-11-22</a>
+          </li>
+          <li>#react</li><li>#css</li>
+        </ul>
+      </footer>
+    </article>
+<article id="2023-11-21T1952">
+      <header>
+        <h1>Node.js includes built-in support for .env files</h1>
+      </header>
+      <p>I've used <code>dotenv</code> for years while developing for nodejs. Node > 20.6.0 now has support for <code>.env</code> files by default. Just use <code>node --env-file .env</code>.</p><figure class="quote"><blockquote>Even though this implementation is missing some features, it has some benefits over using a third-party package. Node.js loads and parses the .env file as it is starting up, so you can include environment variables that configure Node.js itself, like NODE_OPTIONS.</blockquote><figcaption><cite><a href="https://philna.sh/blog/2023/09/05/nodejs-supports-dotenv/">https://philna.sh/blog/2023/09/05/nodejs-supports-dotenv/</a></cite></figcaption></figure>
+      <footer>
+        <ul>
+          <li>
+            <a href="#2023-11-21T1952">2023-11-21</a>
+          </li>
+          <li>#nodejs</li>
+        </ul>
+      </footer>
+    </article>
+<article id="2023-11-21T1605">
+      <header>
+        <h1>rebeccapurple – Eric’s Archived Thoughts</h1>
+      </header>
+      <figure class="quote"><blockquote>It really is an honor, regardless of the outcome, even if it is an honor I wish nobody had had cause to think of in the first place.</blockquote><figcaption><cite><a href="https://meyerweb.com/eric/thoughts/2014/06/19/rebeccapurple/">https://meyerweb.com/eric/thoughts/2014/06/19/rebeccapurple/</a></cite></figcaption></figure><p>The web can be compassionate. At least in the corner I spend my time in. I never knew the story of the web color <span style="background-color:rebeccapurple;color:#fff;padding: 0 16px">rebeccapurple</span> but happened upon it today. As a father my heart goes out to Eric and his family.</p>
+      <footer>
+        <ul>
+          <li>
+            <a href="#2023-11-21T1605">2023-11-21</a>
+          </li>
+          <li>#feels</li>
+        </ul>
+      </footer>
+    </article></main>
+      </body>
+    </html>

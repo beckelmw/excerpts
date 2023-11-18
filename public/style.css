@@ -1,0 +1,150 @@
+html {
+  --font-sans-serif: -apple-system, BlinkMacSystemFont, avenir next, avenir,
+    segoe ui, helvetica neue, helvetica, Ubuntu, roboto, noto, arial, sans-serif;
+  --space: 8px;
+  font-family: var(--font-sans-serif);
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  background-color: var(--color-background);
+  color: var(--color-text);
+}
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+main {
+  padding: calc(var(--space) * 4);
+  padding-top: 0;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  padding: calc(var(--space) * 4);
+}
+
+nav a:first-child {
+  margin-right: auto;
+  font-size: clamp(1rem, 0.5625rem + 2.8125vw, 2.25rem);
+}
+
+.icon {
+  display: block;
+  cursor: pointer;
+  padding: var(--space);
+}
+.icon svg {
+  color: var(--color-text);
+  height: 24px;
+  width: 24px;
+}
+
+main,
+nav {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+code {
+  background-color: var(--color-gray);
+  padding: calc(var(--space) / 4) calc(var(--space) / 2);
+  border-radius: var(--space);
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+a:visited {
+  color: var(--color-primary);
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+h1 {
+  margin-bottom: calc(var(--space) * 2);
+  font-size: clamp(1rem, 0.5625rem + 2.8125vw, 1.5rem);
+}
+
+h2 {
+  margin-bottom: calc(var(--space) * 1.5);
+  font-size: clamp(0.9rem, 0.5625rem + 2.8125vw, 1.25rem);
+}
+
+p,
+ul {
+  margin-bottom: calc(var(--space) * 2);
+}
+
+li {
+  margin-bottom: calc(var(--space) / 2);
+}
+
+pre {
+  margin: calc(var(--space) * 2) 0;
+}
+
+.page-header {
+  margin-bottom: calc(var(--space) * 4);
+}
+
+article {
+  margin-bottom: calc(var(--space) * 14);
+}
+
+article img {
+  max-width: 500px;
+}
+
+article > footer {
+  margin-top: calc(var(--space) * 2);
+}
+
+article > footer > ul {
+  display: flex;
+  list-style-type: none;
+  gap: var(--space);
+  padding: 0;
+}
+
+article > footer > ul li:not(:last-child):after {
+  content: " · ";
+  padding: 0 calc(var(--space) / 2);
+}
+
+figure {
+  padding-left: calc(var(--space) * 2);
+  margin: calc(var(--space) * 2);
+  margin-left: 0;
+  border-left: solid 2px var(--color-primary);
+}
