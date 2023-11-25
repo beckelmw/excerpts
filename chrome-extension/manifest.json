@@ -1,0 +1,12 @@
+{
+  "name": "Create excerpt",
+  "version": "0.0.1",
+  "description": "Creates an excerpt on github for the selected text",
+  "manifest_version": 3,
+  "permissions": ["scripting", "activeTab"],
+  "author": "Bill Beckelman",
+  "background": {
+    "service_worker": "sw.js"
+  },
+  "action": {}
+}
