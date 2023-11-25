@@ -54,6 +54,7 @@ const bundle = await rollup({
 });
 
 const { output } = await bundle.generate({ format: "umd" });
+await mkdir('./public/js');
 await writeFile("./public/js/color-mode.js", output[0].code, "utf-8");
 
 // Copy images
