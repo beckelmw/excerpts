@@ -3,7 +3,7 @@ name: Build
 on:
   push:
     paths:
-      - "excepts/**/*.md"
+      - "excerpts/**/*.md"
       - "how/**/*.md"
   workflow_dispatch:
 
