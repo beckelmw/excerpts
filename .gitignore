@@ -1,5 +1,6 @@
 node_modules
 .DS_Store
+public/img
 public/how
 public/js
 public/404.html

@@ -73,7 +73,7 @@ class ColorMode extends HTMLElement {
         display:flex;
       }
     </style>
-    <div title="Activate ${oppositeMode} theme">${icon}</div>`;
+    <div tabindex="0" title="Activate ${oppositeMode} theme">${icon}</div>`;
   }
 
   toggleColorMode() {
@@ -172,3 +172,16 @@ Object.entries(COLORS).forEach(([name, colorByTheme]) => {
   root.style.setProperty(cssVarName, colorByTheme[mode]);
 });
 ```
+
+## Making it more accessible
+I noticed with my first iteration of the component that it didn't participate in the tab order. Trying to tab from feed to moon icon did not work.
+
+![bad tab order](./img/bad-tab-order.png)
+
+I fixed this by adding `tabindex="0"` to the parent div.
+
+```html
+<div tabindex="0" title="Activate ${oppositeMode} theme">${icon}</div>
+```
+
+![good tab order](./img/good-tab-order.png)

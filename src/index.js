@@ -2,7 +2,7 @@ import { rollup } from "rollup";
 import getFilePaths from "./get-files-paths.js";
 import { getHtml } from "./get-html.js";
 import getDocument from "./get-document.js";
-import { writeFile, mkdir } from "fs/promises";
+import { writeFile, mkdir, cp } from "fs/promises";
 import { join } from "path";
 import getFeed from "./pages/feed.js";
 import home from "./pages/home.js";
@@ -55,3 +55,6 @@ const bundle = await rollup({
 
 const { output } = await bundle.generate({ format: "umd" });
 await writeFile("./public/js/color-mode.js", output[0].code, "utf-8");
+
+// Copy images
+await cp("./how/img", "./public/img", { recursive: true });

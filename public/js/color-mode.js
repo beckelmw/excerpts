@@ -94,7 +94,7 @@
         display:flex;
       }
     </style>
-    <div title="Activate ${oppositeMode} theme">${icon}</div>`;
+    <div tabindex="0" title="Activate ${oppositeMode} theme">${icon}</div>`;
     }
 
     toggleColorMode() {
