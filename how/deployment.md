@@ -2,6 +2,8 @@
 title: Deployment to S3 and Cloudfront via AWS CDK
 ---
 
+## Infrastructure
+
 Below is my [AWS CDK stack](https://docs.aws.amazon.com/cdk/v2/guide/home.html) to deploy the infrastructure for this site.
 
 This stack creates an S3 bucket and Cloudfront CDN distribution. It then adds an DNS A record to the Route53 hosted zone for my domain.
@@ -114,5 +116,16 @@ export class ExcerptsStack extends cdk.Stack {
     });
   }
 }
-
 ```
+
+## Deployment
+
+With the infrastructure above, deployments becomes as simple as:
+
+```shell
+aws s3 sync ./public s3://<my_bucket>
+```
+
+## Future
+
+In the future I could add a [github action](https://github.com/features/actions) and have the deployment run on a push to `main`, but for now this is easy enough.
