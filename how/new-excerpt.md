@@ -1,5 +1,5 @@
 ---
-title: Creating a new excerpt from a script
+title: Creating a new excerpt
 ---
 
 I've come up with a couple of ways to create new excerpt. Check them out below.
