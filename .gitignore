@@ -5,6 +5,7 @@ public/how
 public/js
 public/404.html
 public/index.html
+public/feed.xml
 .env
 cdk.context.json
 cdk.out
