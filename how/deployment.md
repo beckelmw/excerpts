@@ -1,5 +1,5 @@
 ---
-title: Deployment to S3 and Cloudfront via AWS CDK
+title: Deployment
 ---
 
 ## Infrastructure
@@ -126,6 +126,40 @@ With the infrastructure above, deployments becomes as simple as:
 aws s3 sync ./public s3://<my_bucket>
 ```
 
-## Future
+## Github Action
 
-In the future I could add a [github action](https://github.com/features/actions) and have the deployment run on a push to `main`, but for now this is easy enough.
+I am using the Github Action below to run the build and deployment whenever changes to my markdown files are pushed to Github.
+
+```yaml
+name: Build
+
+on:
+  push:
+    paths:
+      - "excerpts/**/*.md"
+      - "how/**/*.md"
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/setup-node@v2
+        with:
+          node-version: "18"
+
+      - uses: actions/checkout@v2
+
+      - name: Set AWS credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: us-east-1
+
+      - name: Execute
+        run: |
+            npm install
+            npm run deploy
+```

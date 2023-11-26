@@ -16,5 +16,5 @@ It also seems like a fun side project during the slow Thanksgiving week. Below i
   - [Adding loading="lazy" to all images](/how/lazy-images.md)
 - [Using JSDoc annotations instead of TypeScript](/how/using-jsdoc-annotations.md)
 - [Dark mode](/how/dark-mode.md)
-- [Deployment to S3 and Cloudfront via AWS CDK](/how/deployment.md)
+- [Deployment](/how/deployment.md)
 - [Creating a new excerpt](/how/new-excerpt.md)
