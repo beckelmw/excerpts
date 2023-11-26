@@ -2,6 +2,7 @@ export type Meta = {
   tags?: Array<string>;
   title?: string;
   date?: string;
+  id?: string
 };
 
 export type ConversionResponse = {

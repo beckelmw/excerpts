@@ -19,7 +19,6 @@
     "aws-cdk-lib": "^2.110.1",
     "clipboardy": "^4.0.0",
     "execa": "^8.0.1",
-    "feed": "^4.2.2",
     "globby": "^14.0.0",
     "hastscript": "^8.0.0",
     "js-yaml": "^4.1.0",

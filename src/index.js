@@ -23,11 +23,16 @@ await writeFile("./public/404.html", notFoundHtml, "utf-8");
 // The links in the feed need to be absolute
 const feedContent = await Promise.all(
   excerptFilePaths.map((path) =>
-    getHtml(path, "https://excerpts.beckelman.net")
+    getHtml(path, "https://excerpts.beckelman.net").then((content) => {
+      const id = path.replace("./excerpts/", "").replace(/\.md$/, "");
+      content.meta = content.meta || {};
+      content.meta.id = id;
+      return content;
+    })
   )
 );
-const rss = getFeed(feedContent);
-await writeFile("./public/feed.xml", rss.rss2(), "utf-8");
+const rss = getFeed(feedContent, "excerpts.beckelman.net");
+await writeFile("./public/feed.xml", rss, "utf-8");
 
 // How I made this site pages
 const howFilePaths = await getFilePaths("./how/**/*.md");
@@ -54,7 +59,7 @@ const bundle = await rollup({
 });
 
 const { output } = await bundle.generate({ format: "umd" });
-await mkdir('./public/js');
+await mkdir("./public/js", { recursive: true });
 await writeFile("./public/js/color-mode.js", output[0].code, "utf-8");
 
 // Copy images
