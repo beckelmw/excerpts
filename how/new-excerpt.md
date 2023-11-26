@@ -81,3 +81,5 @@ I had forgotten about bookmarklets until [reading a post by Dave Rupert](https:/
 I created one below that I can just drag to my bookmarks bar. It does the same thing as the Chrome extension above. The nice thing with the bookmarklet is I should be able to use it in Safari and Firefox as well if I wanted.
 
 <a href='javascript: (() => {let{href:e}=document.location,t=document.title,l=new Date().toISOString().slice(0,16).replace(":",""),n=`---\ntitle: ${t}\ntags:\ndate: ${new Date().toISOString()}\n---`,i=document.getSelection();i&&(n+="\n",n+=`> ${i}`),e&&(n+=` — ${e}`);let c=`https://github.com/beckelmw/excerpts/new/main/excerpts?filename=${l}.md&value=${encodeURIComponent(n)}`; window.open(c, "_blank"); })()'>Excerpt</a>
+
+![github new excerpt example](./img/github-new-excerpt.png)
