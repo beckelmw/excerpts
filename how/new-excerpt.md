@@ -2,7 +2,7 @@
 title: Creating a new excerpt
 ---
 
-I've come up with a couple of ways to create new excerpt. Check them out below.
+I've come up with severalways to create new excerpt. Check them out below.
 
 ## Creating via nodejs
 
@@ -62,6 +62,8 @@ await writeFile(filePath, md, "utf-8");
 await execa("code", [filePath]);
 ```
 
+<hr />
+
 ## Creating via a chrome extension
 
 I created a simple chrome extension which grabs the URL, title and selected text from the active tab. It then takes these values and appends them to a github URL for creating a new file.
@@ -69,3 +71,13 @@ I created a simple chrome extension which grabs the URL, title and selected text
 You can see the code for the extension [here](https://github.com/beckelmw/excerpts/tree/main/chrome-extension).
 
 I plan to write about this more later.
+
+<hr />
+
+## Creating via a bookmarklet
+
+I had forgotten about bookmarklets until [reading a post by Dave Rupert](https://daverupert.com/2023/10/read-later-in-feedbin/).
+
+I created one below that I can just drag to my bookmarks bar. It does the same thing as the Chrome extension above. The nice thing with the bookmarklet is I should be able to use it in Safari and Firefox as well if I wanted.
+
+<a href='javascript: (() => {let{href:e}=document.location,t=document.title,l=new Date().toISOString().slice(0,16).replace(":",""),n=`---\ntitle: ${t}\ntags:\ndate: ${new Date().toISOString()}\n---`,i=document.getSelection();i&&(n+="\n",n+=`> ${i}`),e&&(n+=` — ${e}`);let c=`https://github.com/beckelmw/excerpts/new/main/excerpts?filename=${l}.md&value=${encodeURIComponent(n)}`; window.open(c, "_blank"); })()'>Excerpt</a>

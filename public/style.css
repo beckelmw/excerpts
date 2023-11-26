@@ -39,6 +39,10 @@ h6 {
   overflow-wrap: break-word;
 }
 
+hr {
+  margin: calc(var(--space) * 4) 0;
+}
+
 main {
   padding: calc(var(--space) * 4);
   padding-top: 0;
