@@ -6,6 +6,11 @@ class ColorMode extends HTMLElement {
 
   constructor() {
     super();
+
+    if(!CSS.supports('color', 'oklch(0 0 0)')) {
+      return;
+    }
+
     this.attachShadow({ mode: "open" });
     this.toggleColorMode = this.toggleColorMode.bind(this);
 
@@ -29,6 +34,12 @@ class ColorMode extends HTMLElement {
   connectedCallback() {
     if (this.shadowRoot) {
       this.shadowRoot.addEventListener("click", this.toggleColorMode);
+      this.shadowRoot.addEventListener("keypress", (evt) => {
+        // @ts-ignore
+        if (evt.keyCode === 13) {
+          this.toggleColorMode();
+        }
+      });
     }
   }
 

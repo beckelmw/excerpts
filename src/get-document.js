@@ -20,6 +20,7 @@ export default function document(body, title) {
           content=${title || "A collection of excerpts by Bill Beckelman"}
         />
         <script src="/js/color-mode.js"></script>
+        <script src="/js/hue-selector.js"></script>
         <style>
           ${getTheme()}
         </style>
@@ -33,7 +34,7 @@ export default function document(body, title) {
       </head>
       <body>
         <nav>
-          <a href="/">Bill Beckelman's collection of excerpts</a>
+          <a href="/">Bill Beckelman's excerpt collection</a>
 
           <a class="icon" title="How I made this site" href="/how/">
             <svg
@@ -81,6 +82,7 @@ export default function document(body, title) {
           </a>
 
           <color-mode></color-mode>
+          <hue-selector></hue-selector>
         </nav>
 
         <main>${title && html`<h1>${title}</h1>`} ${body}</main>

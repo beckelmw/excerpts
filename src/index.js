@@ -53,14 +53,22 @@ for (const { html: content, filePath, meta } of howHtmlFiles) {
   await writeFile(path, getDocument(content, meta?.title), "utf-8");
 }
 
+await mkdir("./public/js", { recursive: true });
+
 // Color mode JS
-const bundle = await rollup({
+const colorModeBundle = await rollup({
   input: "./src/components/color-mode.js",
 });
-
-const { output } = await bundle.generate({ format: "umd" });
-await mkdir("./public/js", { recursive: true });
+const { output } = await colorModeBundle.generate({ format: "umd" });
 await writeFile("./public/js/color-mode.js", output[0].code, "utf-8");
+
+const hueSelectorBundle = await rollup({
+  input: "./src/components/hue-selector.js",
+});
+const { output: hueSelector } = await hueSelectorBundle.generate({
+  format: "umd",
+});
+await writeFile("./public/js/hue-selector.js", hueSelector[0].code, "utf-8");
 
 // Copy images
 await cp("./how/img", "./public/img", { recursive: true });
