@@ -70,5 +70,8 @@ const { output: hueSelector } = await hueSelectorBundle.generate({
 });
 await writeFile("./public/js/hue-selector.js", hueSelector[0].code, "utf-8");
 
+// Copy Demos
+await cp("./src/demos", "./public/demos", { recursive: true });
+
 // Copy images
 await cp("./how/img", "./public/img", { recursive: true });

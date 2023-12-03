@@ -16,5 +16,6 @@ It also seems like a fun side project during the slow Thanksgiving week. Below i
   - [Adding loading="lazy" to all images](/how/lazy-images.md)
 - [Using JSDoc annotations instead of TypeScript](/how/using-jsdoc-annotations.md)
 - [Dark mode](/how/dark-mode.md)
+- [Dynamic theme](/how/dynamic-theme.md)
 - [Deployment](/how/deployment.md)
 - [Creating a new excerpt](/how/new-excerpt.md)

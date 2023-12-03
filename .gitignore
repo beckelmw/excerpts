@@ -1,11 +1,8 @@
 node_modules
 .DS_Store
-public/img
-public/how
-public/js
-public/404.html
-public/index.html
-public/feed.xml
+public
+!public/style.css
+!public/favicon.svg
 .env
 cdk.context.json
 cdk.out
