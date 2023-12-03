@@ -12,7 +12,27 @@ export const COLORS = {
     dark: "oklch(0.85 0.20 var(--hue, 250))",
   },
   gray: {
-    light: "oklch(0.62 0 var(--hue, 250))",
+    light: "oklch(0.90 0 var(--hue, 250))",
     dark: "oklch(0.62 0 var(--hue, 250))",
   },
 };
+
+
+export const RGB_COLORS = {
+  background: {
+    light: "#FAFAFA",
+    dark: "#303943",
+  },
+  text: {
+    light: "#050505",
+    dark: "#ffffff",
+  },
+  primary: {
+    light: "#0077B2",
+    dark: "#B1DBEF",
+  },
+  gray: {
+    light: "#D5D5D5",
+    dark: "#5F5F5F",
+  },
+}

@@ -28,13 +28,17 @@ class HueSelector extends HTMLElement {
       return;
     }
 
-    this.shadowRoot.querySelector('#dropper')?.addEventListener("click", this.toggleHueSelector);
-    this.shadowRoot.querySelector('#dropper')?.addEventListener("keypress", (ev) => {
-      // @ts-ignore
-      if (ev.keyCode === 13) {
-        this.toggleHueSelector(ev);
-      }
-    });
+    this.shadowRoot
+      .querySelector("#dropper")
+      ?.addEventListener("click", this.toggleHueSelector);
+    this.shadowRoot
+      .querySelector("#dropper")
+      ?.addEventListener("keypress", (ev) => {
+        // @ts-ignore
+        if (ev.keyCode === 13) {
+          this.toggleHueSelector(ev);
+        }
+      });
 
     this.shadowRoot
       .querySelector('input[type="range"]')
@@ -92,6 +96,7 @@ class HueSelector extends HTMLElement {
         pointer-events: none;
       } 
       div {
+        overflow:hidden;
         cursor: pointer;
         display: flex;
       }
@@ -124,6 +129,7 @@ class HueSelector extends HTMLElement {
         }
       }
       #inputBackground {
+        box-sizing: border-box;
         position: absolute;
         top: 0;
         left: 0;

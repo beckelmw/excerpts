@@ -1,4 +1,4 @@
-import { COLORS } from "../constants.js";
+import { COLORS, RGB_COLORS } from "../constants.js";
 
 class ColorMode extends HTMLElement {
   /** @type {'light' | 'dark' | null} */
@@ -6,10 +6,6 @@ class ColorMode extends HTMLElement {
 
   constructor() {
     super();
-
-    if(!CSS.supports('color', 'oklch(0 0 0)')) {
-      return;
-    }
 
     this.attachShadow({ mode: "open" });
     this.toggleColorMode = this.toggleColorMode.bind(this);
@@ -106,8 +102,8 @@ class ColorMode extends HTMLElement {
     }
 
     const root = window.document.documentElement;
-
-    Object.entries(COLORS).forEach(([name, colorByTheme]) => {
+    const colors = CSS.supports('color', 'oklch(0 0 150)') ? COLORS : RGB_COLORS
+    Object.entries(colors).forEach(([name, colorByTheme]) => {
       const cssVarName = `--color-${name}`;
       root.style.setProperty(cssVarName, colorByTheme[mode]);
     });

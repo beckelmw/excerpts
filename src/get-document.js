@@ -1,5 +1,5 @@
 import html from "./html.js";
-import { COLORS } from "./constants.js";
+import { COLORS, RGB_COLORS } from "./constants.js";
 
 /**
  *
@@ -34,7 +34,7 @@ export default function document(body, title) {
       </head>
       <body>
         <nav>
-          <a href="/">Bill Beckelman's excerpt collection</a>
+          <a href="/">Bill Beckelman's Excerpt Collection</a>
 
           <a class="icon" title="How I made this site" href="/how/">
             <svg
@@ -53,8 +53,17 @@ export default function document(body, title) {
             </svg>
           </a>
 
-          <a href="https://github.com/beckelmw/excerpts" class="icon" title="See the code on github">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 98 96" width="24px" height="24px">
+          <a
+            href="https://github.com/beckelmw/excerpts"
+            class="icon"
+            title="See the code on github"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 98 96"
+              width="24px"
+              height="24px"
+            >
               <path
                 fill-rule="evenodd"
                 clip-rule="evenodd"
@@ -93,16 +102,32 @@ export default function document(body, title) {
 function getTheme() {
   return `
   :root {
-    --color-background: ${COLORS.background.light};
-    --color-text: ${COLORS.text.light};
-    --color-primary: ${COLORS.primary.light};
+    --color-background: ${RGB_COLORS.background.light};
+    --color-text: ${RGB_COLORS.text.light};
+    --color-primary: ${RGB_COLORS.primary.light};
   }
   
   @media (prefers-color-scheme: dark) {
     :root {
-      --color-background: ${COLORS.background.dark};
-      --color-text: ${COLORS.text.dark};
-      --color-primary: ${COLORS.primary.dark};
+      --color-background: ${RGB_COLORS.background.dark};
+      --color-text: ${RGB_COLORS.text.dark};
+      --color-primary: ${RGB_COLORS.primary.dark};
+    }
+  }
+
+  @supports (color: oklch(0 0 150)) {
+    :root {
+      --color-background: ${COLORS.background.light};
+      --color-text: ${COLORS.text.light};
+      --color-primary: ${COLORS.primary.light};
+    }
+    
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --color-background: ${COLORS.background.dark};
+        --color-text: ${COLORS.text.dark};
+        --color-primary: ${COLORS.primary.dark};
+      }
     }
   }`;
 }

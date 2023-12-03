@@ -30,6 +30,7 @@ svg {
   display: block;
   max-width: 100%;
 }
+p,
 h1,
 h2,
 h3,
@@ -46,7 +47,6 @@ hr {
 main {
   padding: calc(var(--space) * 4);
   padding-top: 0;
-  word-break: break-all;
 }
 
 nav {
@@ -88,6 +88,7 @@ main,
 nav {
   max-width: 960px;
   margin: 0 auto;
+  overflow: hidden;
 }
 
 code {
@@ -99,6 +100,7 @@ code {
 a {
   color: var(--color-primary);
   text-decoration: none;
+  word-break: break-all;
 }
 
 a:visited {
