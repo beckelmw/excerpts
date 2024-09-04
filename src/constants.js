@@ -13,7 +13,7 @@ export const COLORS = {
   },
   gray: {
     light: "oklch(0.90 0 var(--hue, 250))",
-    dark: "oklch(0.62 0 var(--hue, 250))",
+    dark: "oklch(0.40 0 var(--hue, 250))",
   },
 };
 

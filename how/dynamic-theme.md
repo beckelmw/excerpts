@@ -6,7 +6,7 @@ You can change the theme on this site by clicking the eye dropper icon in the na
 
 I am using a web component when the browser supports the OKLCH color format to change a CSS custom property representing the hue value. The hue in OKLCH is a value between 0 and 360.
 
-The basic idea can be seen in this demo:
+The basic idea can be seen in this demo by using the slider:
 
 <hue-demo></hue-demo>
 
